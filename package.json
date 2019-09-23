@@ -26,7 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://strayblues.github.io/hexagon-app",
+  "homepage": "https://OnlpLab.github.io/hexagon-app",
   "eslintConfig": {
     "extends": "react-app"
   },
