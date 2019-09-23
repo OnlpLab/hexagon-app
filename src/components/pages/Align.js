@@ -75,7 +75,6 @@ class Align extends Component {
           <h1>Align The Tiles</h1>
           <Step>
             <StepElement>{this.state.currentStep}</StepElement>
-            <Separator></Separator>
             <ButtonContainer>
               <NextButton
                 onClick={this.showNextLine}
