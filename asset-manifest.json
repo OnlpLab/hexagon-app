@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/hexagon-app/static/css/main.69fee84f.chunk.css",
+    "main.js": "/hexagon-app/static/js/main.6c5980e2.chunk.js",
+    "main.js.map": "/hexagon-app/static/js/main.6c5980e2.chunk.js.map",
+    "runtime~main.js": "/hexagon-app/static/js/runtime~main.486a813d.js",
+    "runtime~main.js.map": "/hexagon-app/static/js/runtime~main.486a813d.js.map",
+    "static/js/2.1812dbc7.chunk.js": "/hexagon-app/static/js/2.1812dbc7.chunk.js",
+    "static/js/2.1812dbc7.chunk.js.map": "/hexagon-app/static/js/2.1812dbc7.chunk.js.map",
+    "index.html": "/hexagon-app/index.html",
+    "precache-manifest.de7d5f4e411ab348b390f84cf3f6e1ca.js": "/hexagon-app/precache-manifest.de7d5f4e411ab348b390f84cf3f6e1ca.js",
+    "service-worker.js": "/hexagon-app/service-worker.js",
+    "static/css/main.69fee84f.chunk.css.map": "/hexagon-app/static/css/main.69fee84f.chunk.css.map",
+    "static/media/board1.png": "/hexagon-app/static/media/board1.9bd064ed.png"
+  }
+}
