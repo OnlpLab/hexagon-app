@@ -10,17 +10,29 @@ class DesctiptionsForm extends Component {
   // TODO: functions: handleInputChange, addInput, etc.
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      text: e.target.value
     });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.onSubmit({
-      id: shortid.generate(),
-      text: this.state.text,
-      complete: false
-    });
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  //   this.props.onSubmit({
+  //     id: shortid.generate(),
+  //     text: this.state.text,
+  //     complete: false
+  //   });
+  // };
+
+  handleKeyPress = e => {
+    // e.preventDefault();
+
+    if (e.key === "Enter") {
+      this.props.onSubmit({
+        // id: shortid.generate(),
+        text: this.state.text,
+        complete: false
+      });
+    }
   };
 
   render() {
@@ -29,14 +41,13 @@ class DesctiptionsForm extends Component {
         <Container>
           <Instructions />
           <InputContainer>
-            <form onSubmit={this.handleSubmit}>
-              <StyledInput
-                name="text"
-                value={this.state.text}
-                onChange={this.handleChange}
-                placeholder="Start typing here..."
-              ></StyledInput>
-            </form>
+            <StyledInput
+              onKeyPress={this.handleKeyPress}
+              name="text"
+              value={this.state.text}
+              onChange={this.handleChange}
+              placeholder="Start typing here..."
+            ></StyledInput>
           </InputContainer>
         </Container>
       </>
