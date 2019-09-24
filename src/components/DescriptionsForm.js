@@ -1,34 +1,21 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { shortid } from "shortid";
 
 class DesctiptionsForm extends Component {
   state = {
-    text: "" // input from user
+    text: "", // input from user
+    label: ""
   };
 
-  // TODO: functions: handleInputChange, addInput, etc.
   handleChange = e => {
     this.setState({
       text: e.target.value
     });
   };
 
-  // handleSubmit = e => {
-  //   e.preventDefault();
-  //   this.props.onSubmit({
-  //     id: shortid.generate(),
-  //     text: this.state.text,
-  //     complete: false
-  //   });
-  // };
-
   handleKeyPress = e => {
-    // e.preventDefault();
-
     if (e.key === "Enter") {
       this.props.onSubmit({
-        // id: shortid.generate(),
         text: this.state.text,
         complete: false
       });

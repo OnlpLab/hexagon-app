@@ -10,8 +10,18 @@ import DescriptionsForm from "../DescriptionsForm";
 
 class Describe extends Component {
   state = {
-    descriptions: [] // array of strings
+    descriptions: ["Start typing here..."] // array of strings
   };
+
+  // onEnter get the entire input
+
+  // check if subsring \n appears in input
+
+  // separate paragraphs by \n and clear the \n
+
+  // push paragraph to the descriptions array
+
+  // Add number labels to beginning of each paragraph
 
   addDescription = description => {
     this.setState({
@@ -43,7 +53,18 @@ class Describe extends Component {
         </BoardContainer>
         <DescriptionsFormContainer>
           <InputContainer>
-            <DescriptionsForm onSubmit={this.addDescription} />
+            <ol>
+              {this.state.descriptions.map((text, index) => (
+                <li>
+                  <DescriptionsForm
+                    onSubmit={this.addDescription}
+                    text={text}
+                    index={index}
+                    // label={index}
+                  />
+                </li>
+              ))}
+            </ol>
           </InputContainer>
           <StyledButton onClick={this.handleSend}>
             <RedirectLink to="/align">Done</RedirectLink>
