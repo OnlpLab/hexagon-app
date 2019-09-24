@@ -1,11 +1,24 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Input from "./common/Input";
 
-class TextField extends Component {
-  state = {};
+class DesctiptionsForm extends Component {
+  state = {
+    text: "" // input from user
+  };
 
   // TODO: functions: handleInputChange, addInput, etc.
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.onSubmit({
+      text: this.state.text
+    });
+  };
 
   render() {
     return (
@@ -13,11 +26,14 @@ class TextField extends Component {
         <Container>
           <Instructions />
           <InputContainer>
-            <StyledInput placeholder="Start typing here...">
-              {/* {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((a, i) => (
-                  <textarea placeholder="input..." label={i + 1} />
-              ))} */}
-            </StyledInput>
+            <form onSubmit={this.handleSubmit}>
+              <StyledInput
+                name="text"
+                value={this.state.text}
+                onChange={this.handleChange}
+                placeholder="Start typing here..."
+              ></StyledInput>
+            </form>
           </InputContainer>
         </Container>
       </>
@@ -25,7 +41,7 @@ class TextField extends Component {
   }
 }
 
-export default TextField;
+export default DesctiptionsForm;
 
 const Container = styled.div``;
 const Instructions = styled.div``;

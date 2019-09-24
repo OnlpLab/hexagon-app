@@ -6,9 +6,19 @@ import { Link } from "react-router-dom";
 import board1 from "../../data/board1.png";
 
 // Components
-import TextField from "../TextField";
+import DescriptionsForm from "../DescriptionsForm";
 
 class Describe extends Component {
+  state = {
+    descriptions: [] // array of strings
+  };
+
+  addDescription = description => {
+    this.setState({
+      descriptions: [description, ...this.state.descriptions]
+    });
+  };
+
   componentDidMount() {
     const task = taskService.getEmpty();
     this.setState({ task }); //inputs
@@ -22,7 +32,7 @@ class Describe extends Component {
     // Store user text and other required info
     this.handleTaskDescription();
     // Move to the "Align" task page
-    // document.location.href = "https://strayblues.github.io/hexagon-app/align"; // Causes bug on deployment
+    // document.location.href = "https://onlplab.github.io/hexagon-app/align"; // Causes bug on deployment
   };
   render() {
     return (
@@ -31,14 +41,14 @@ class Describe extends Component {
           <h2>Write instructions for painting the tiles</h2>
           <TaskImage src={board1} alt={"task"} />
         </BoardContainer>
-        <TextFieldContainer>
+        <DescriptionsFormContainer>
           <InputContainer>
-            <TextField />
+            <DescriptionsForm onSubmit={this.addDescription} />
           </InputContainer>
           <StyledButton onClick={this.handleSend}>
             <RedirectLink to="/align">Done</RedirectLink>
           </StyledButton>
-        </TextFieldContainer>
+        </DescriptionsFormContainer>
       </>
     );
   }
@@ -86,7 +96,7 @@ const RedirectLink = styled(Link)`
     text-decoration: none;
   }
 `;
-const TextFieldContainer = styled.div`
+const DescriptionsFormContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
