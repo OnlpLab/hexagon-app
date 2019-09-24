@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { shortid } from "shortid";
 
 class DesctiptionsForm extends Component {
   state = {
@@ -16,7 +17,9 @@ class DesctiptionsForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit({
-      text: this.state.text
+      id: shortid.generate(),
+      text: this.state.text,
+      complete: false
     });
   };
 
