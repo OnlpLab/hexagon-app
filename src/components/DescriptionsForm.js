@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import prismjs from "react-prism";
+// import prismjs from "react-prism";
+import Prism from "prismjs";
 
 class DesctiptionsForm extends Component {
   state = {
     text: "", // input from user
     label: ""
   };
+
+  // componentDidMount() {
+  //   // You can call the Prism.js API here
+  //   // Use setTimeout to push onto callback queue so it runs after the DOM is updated
+  //   setTimeout(() => Prism.highlightAll(), 0);
+  // }
 
   handleChange = e => {
     this.setState({
@@ -31,6 +38,11 @@ class DesctiptionsForm extends Component {
           <InputContainer>
             <code>
               <pre className="line-numbers" data-start="1">
+                <code className="language-markup">
+                  <PrismCode />
+                </code>
+              </pre>
+              <pre className="line-numbers" data-start="1">
                 <PrismCode
                   contentEditable
                   placeholder="Start here"
@@ -52,6 +64,8 @@ class DesctiptionsForm extends Component {
 }
 
 export default DesctiptionsForm;
+
+setTimeout(() => Prism.highlightAll(), 0);
 
 const Container = styled.div``;
 const Instructions = styled.div``;

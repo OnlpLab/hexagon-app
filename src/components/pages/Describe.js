@@ -4,7 +4,8 @@ import Button from "../common/Button";
 import taskService from "../../services/taskService";
 import { Link } from "react-router-dom";
 import board1 from "../../data/board1.png";
-import prismjs from "react-prism";
+// import prismjs from "react-prism";
+// import Prism from "prismjs";
 
 // Components
 import DescriptionsForm from "../DescriptionsForm";
