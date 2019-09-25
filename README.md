@@ -41,7 +41,7 @@ Also keep in mind that the desired functionality may change over time.
 <b>The instructions component in the Align screen/page</b> only contains mock data, hardcoded in the component. It isn't connected to anything. This feature needs to be further developed.
 </li><br>
 <li>
-<b>Describe screen:</b> Not completed, and personally I found this kind of hard to figure out. This feature requires communication between the DescriptionsForm.js component (hexagon-app/src/components/DescriptionsForm.js) and its "parent" component, namely Describe.js (hexagon-app/src/components/pages/Describe.js).
+<b>Describe screen:</b> Not completed. This feature requires communication between the DescriptionsForm.js component (hexagon-app/src/components/DescriptionsForm.js) and its "parent" component, namely Describe.js (hexagon-app/src/components/pages/Describe.js).
 
 User input should be tracked and updated at least each time the user clicks the Enter key. The input should be split into strings and pushed into an array named "descriptions". The array should update for each new "Enter" sign added or deleted, in order to keep the line numbers correct and up to date.
 
