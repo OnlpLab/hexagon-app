@@ -18,7 +18,7 @@ Currently configured to deploy the app to [GitHub Pages](https://onlplab.github.
 
 More info about Create React App deployment: https://facebook.github.io/create-react-app/docs/deployment
 
-## Notes from [Hagar](https://github.com/strayblues))
+## Notes from [Hagar](https://github.com/strayblues)
 
 <ol>
 <li>
