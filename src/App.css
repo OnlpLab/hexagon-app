@@ -51,3 +51,29 @@ text {
 .inactive-btn:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0) !important;
 }
+
+/* for line numbers */
+/* [class*="language-sql"] {
+  counter-reset: linenumber;
+}
+span.line {
+  display: inline-block;
+  width: 100%;
+  counter-increment: linenumber;
+}
+span.line:nth-child(odd) {
+  background: #feffcf;
+}
+span.line:before {
+  content: counter(linenumber);
+  font-size: 100%;
+  width: 2em;
+  display: inline-block;
+  font-weight: normal;
+  color: black;
+  border-right: 1px solid black;
+  margin-right: 5px;
+  padding-right: 5px;
+  text-align: right;
+} */
+/* /for line numbers */
